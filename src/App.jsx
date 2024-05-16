@@ -1,13 +1,12 @@
-import React from 'react'
-import { ListGroup, TodoHome } from './components'
+import React from "react";
+import { TodoHome } from "./components";
 
 const App = () => {
   return (
-    <div>
-      <TodoHome/>
-      <ListGroup/>
+    <div className="bg-cyan-600" >
+      <TodoHome />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
