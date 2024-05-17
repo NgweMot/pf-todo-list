@@ -44,6 +44,9 @@ const TodoHome = () => {
       toDo.map((el) => (el.id === id ? { ...el, isDone: !el.isDone } : el))
     );
   };
+  const updateJob = (id, newJob) => {
+    setTodo(toDo.map((el) => (el.id === id ? { ...el, jobName: newJob } : el)));
+  };
   return (
     <section className="bg-white dark:bg-cyan-600">
       <div className="py-8 px-4 mx-auto max-w-2xl lg:py-16">
@@ -55,8 +58,9 @@ const TodoHome = () => {
               doneList={doneList}
               deleteToDo={deleteToDo}
               toDo={toDo}
+              updateJob={updateJob}
             />
-            <FinishedList toDo={toDo} />
+            {/* <FinishedList toDo={toDo} doneList={doneList} /> */}
           </div>
         </div>
       </div>

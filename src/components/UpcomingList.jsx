@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Lists from "./Lists";
 import Status from "./Status";
 import EmptyState from "./EmptyState";
-const UpcomingList = ({ toDo, deleteToDo, doneList }) => {
+const UpcomingList = ({ toDo, deleteToDo, doneList ,updateJob}) => {
   return (
     <>
       <div className="sm:col-span-2 dark:bg-cyan-600">
@@ -17,6 +17,7 @@ const UpcomingList = ({ toDo, deleteToDo, doneList }) => {
             id={id}
             jobName={jobName}
             isDone={isDone}
+            updateJob={updateJob}
           />
         ))}
       </div>
